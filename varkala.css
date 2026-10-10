@@ -1,0 +1,1140 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f3e8;
+    color: #173c32;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    height: 100vh;
+    min-height: 680px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(8, 35, 29, 0.38),
+            rgba(8, 35, 29, 0.52)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Sunset_at_Varkala_Beach.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+.logo {
+
+    font-size: 25px;
+
+    color: #f1d27a;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.navbar nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+
+    color: #f1d27a;
+}
+
+.nav-button {
+
+    border: 1px solid #f1d27a;
+
+    padding: 11px 20px;
+
+    color: #f1d27a !important;
+}
+
+.nav-button:hover {
+
+    background: #f1d27a;
+
+    color: #173c32 !important;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+
+    text-align: center;
+
+    max-width: 1000px;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+.eyebrow {
+
+    font-family: Arial, sans-serif;
+
+    color: #f1d27a;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+
+    font-size: clamp(90px, 15vw, 190px);
+
+    font-weight: normal;
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+
+    text-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.4);
+
+    margin-bottom: 30px;
+}
+
+.hero-text {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 35px;
+}
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: #e8c96c;
+
+    color: #173c32;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+
+    background: transparent;
+
+    border: 1px solid #e8c96c;
+
+    color: white;
+}
+
+.scroll-text {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,0.8);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+
+    background: #f7f3e8;
+}
+
+.intro-image {
+
+    overflow: hidden;
+}
+
+.intro-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.intro-content {
+
+    padding: 100px 12%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.label {
+
+    font-family: Arial, sans-serif;
+
+    color: #a57c2c;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.intro h2 span {
+
+    color: #a57c2c;
+}
+
+.intro-content p:not(.label) {
+
+    font-family: Arial, sans-serif;
+
+    color: #63716b;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    max-width: 500px;
+}
+
+
+/* =========================
+   KERALA STRIP
+========================= */
+
+.kerala-strip {
+
+    background: #173c32;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 38px 8%;
+
+    text-align: center;
+}
+
+.kerala-strip div {
+
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.kerala-strip div:last-child {
+
+    border-right: none;
+}
+
+.kerala-strip span {
+
+    font-size: 25px;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.kerala-strip p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CLIFF SECTION
+========================= */
+
+.cliff-section {
+
+    min-height: 620px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #e9e1d0;
+}
+
+.cliff-content {
+
+    padding: 100px 15%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.cliff-content h2 {
+
+    font-size: 50px;
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+.cliff-content h2 span {
+
+    color: #a57c2c;
+}
+
+.cliff-content p:not(.label) {
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.8;
+
+    color: #596761;
+
+    margin-bottom: 30px;
+}
+
+.outline-button {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    border: 1px solid #173c32;
+
+    padding: 14px 25px;
+
+    color: #173c32;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.outline-button:hover {
+
+    background: #173c32;
+
+    color: white;
+}
+
+.cliff-visual {
+
+    background:
+        linear-gradient(
+            rgba(13, 50, 41, 0.25),
+            rgba(13, 50, 41, 0.45)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Sunset_at_Varkala_Beach.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 50px;
+}
+
+.cliff-card {
+
+    background: rgba(247,243,232,0.94);
+
+    padding: 30px;
+
+    max-width: 320px;
+}
+
+.cliff-number {
+
+    color: #a57c2c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.cliff-card h3 {
+
+    font-size: 27px;
+
+    font-weight: normal;
+
+    margin-bottom: 10px;
+}
+
+.cliff-card p {
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.6;
+
+    color: #68736e;
+}
+
+
+/* =========================
+   PLACES
+========================= */
+
+.places {
+
+    padding: 110px 8%;
+
+    background: #f7f3e8;
+}
+
+.center {
+
+    text-align: center;
+}
+
+.section-title {
+
+    text-align: center;
+
+    font-size: 45px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    color: #68736e;
+
+    margin-bottom: 60px;
+}
+
+.places-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.place-card {
+
+    background: white;
+
+    padding: 35px 28px;
+
+    min-height: 290px;
+
+    border: 1px solid #e5dece;
+
+    transition: 0.3s;
+}
+
+.place-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(30,50,40,0.10);
+}
+
+.place-icon {
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.place-card h3 {
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.place-card p {
+
+    font-family: Arial, sans-serif;
+
+    color: #68736e;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.place-card span {
+
+    font-family: Arial, sans-serif;
+
+    color: #a57c2c;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SUNSET SECTION
+========================= */
+
+.sunset {
+
+    height: 620px;
+
+    background:
+        linear-gradient(
+            rgba(8,31,26,0.38),
+            rgba(8,31,26,0.52)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Sunset_at_Varkala_Beach.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.sunset-overlay p {
+
+    color: #f1d27a;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+.sunset-overlay h2 {
+
+    font-size: 62px;
+
+    font-weight: normal;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.sunset-overlay span {
+
+    font-family: Arial, sans-serif;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+
+    padding: 110px 8%;
+
+    background: #173c32;
+
+    color: white;
+}
+
+.experience .label {
+
+    color: #e8c96c;
+}
+
+.experience .section-title {
+
+    color: white;
+
+    margin-bottom: 60px;
+}
+
+.experience-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+}
+
+.experience-item {
+
+    border-top: 1px solid rgba(255,255,255,0.25);
+
+    padding-top: 25px;
+}
+
+.experience-number {
+
+    color: #e8c96c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.experience-item h3 {
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.experience-item p {
+
+    font-family: Arial, sans-serif;
+
+    color: #bdc9c3;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ITINERARY
+========================= */
+
+.itinerary {
+
+    padding: 110px 12%;
+
+    background: #f7f3e8;
+}
+
+.itinerary-heading {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.itinerary-heading h2 {
+
+    font-size: 45px;
+
+    font-weight: normal;
+}
+
+.timeline {
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #ddd4c1;
+}
+
+.timeline-item > span {
+
+    color: #a57c2c;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+.timeline-item h3 {
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+
+    font-family: Arial, sans-serif;
+
+    color: #68736e;
+}
+
+
+/* =========================
+   PACKAGE
+========================= */
+
+.package {
+
+    padding: 110px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(23,60,50,0.96),
+            rgba(23,60,50,0.96)
+        );
+    
+    color: white;
+}
+
+.package .label {
+
+    color: #e8c96c;
+}
+
+.package h2 {
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+.package > p:not(.label) {
+
+    font-family: Arial, sans-serif;
+
+    color: #c8d0cc;
+
+    margin-bottom: 20px;
+}
+
+.price {
+
+    color: #e8c96c;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+.package-button {
+
+    display: inline-block;
+
+    background: #e8c96c;
+
+    color: #173c32;
+
+    padding: 15px 30px;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.package-button:hover {
+
+    background: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #0d2922;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 20px;
+}
+
+.footer-logo {
+
+    color: #e8c96c;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+
+    font-family: Arial, sans-serif;
+
+    color: #aebbb5;
+
+    margin-bottom: 25px;
+}
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+
+    color: #d4ddd8;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+
+    color: #e8c96c;
+}
+
+footer small {
+
+    color: #788780;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar nav {
+
+        gap: 15px;
+    }
+
+    .places-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experience-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-content {
+
+        padding: 70px 8%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding: 20px;
+    }
+
+    .navbar nav a:not(.nav-button) {
+
+        display: none;
+    }
+
+    .hero h1 {
+
+        font-size: 75px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-text {
+
+        font-size: 15px;
+    }
+
+    .eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .intro {
+
+        grid-template-columns: 1fr;
+    }
+
+    .intro-image {
+
+        height: 400px;
+    }
+
+    .intro-content {
+
+        padding: 70px 30px;
+    }
+
+    .intro h2 {
+
+        font-size: 40px;
+    }
+
+    .kerala-strip {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+    }
+
+    .kerala-strip div {
+
+        border-right: none;
+    }
+
+    .cliff-section {
+
+        grid-template-columns: 1fr;
+    }
+
+    .cliff-content {
+
+        padding: 70px 30px;
+    }
+
+    .cliff-visual {
+
+        min-height: 450px;
+    }
+
+    .places {
+
+        padding: 80px 25px;
+    }
+
+    .places-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+
+        font-size: 36px;
+    }
+
+    .sunset {
+
+        height: 500px;
+    }
+
+    .sunset-overlay h2 {
+
+        font-size: 42px;
+    }
+
+    .experience {
+
+        padding: 80px 25px;
+    }
+
+    .experience-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .itinerary {
+
+        padding: 80px 25px;
+    }
+
+    .package h2 {
+
+        font-size: 36px;
+    }
+
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan My Kerala Trip | Kerala Trails</title>
+
+    <link rel="stylesheet" href="plan.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            Kerala Trails
+        </div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="places.html">Places</a>
+    <a href="package.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="plan.html" class="active">Plan My Trip</a>
+    <a href="about.html">About</a>
+    <a href="checklist.html">Checklist</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="book-btn">Book Now</a>
+</nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="plan-hero">
+
+        <div class="hero-content">
+
+            <span>KERALA • YOUR WAY</span>
+
+            <h1>Plan My Kerala Trip</h1>
+
+            <p>
+                Tell us what kind of Kerala experience you want,
+                and we'll create a simple trip idea for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLANNER -->
+    <section class="planner">
+
+        <div class="planner-title">
+
+            <span>CREATE YOUR JOURNEY</span>
+
+            <h2>Let's Plan Your Trip 🌴</h2>
+
+            <p>
+                Choose your preferences below.
+            </p>
+
+        </div>
+
+
+        <div class="planner-box">
+
+            <div class="form-group">
+
+                <label for="days">
+                    How many days?
+                </label>
+
+                <select id="days">
+
+                    <option value="">Select days</option>
+
+                    <option value="1">1 Day</option>
+
+                    <option value="2">2 Days</option>
+
+                    <option value="3">3 Days</option>
+
+                    <option value="5">5 Days</option>
+
+                    <option value="7">7 Days</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="budget">
+                    Your budget
+                </label>
+
+                <select id="budget">
+
+                    <option value="">Select budget</option>
+
+                    <option value="budget">Budget Friendly</option>
+
+                    <option value="medium">Comfort</option>
+
+                    <option value="premium">Premium</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="type">
+                    What do you love?
+                </label>
+
+                <select id="type">
+
+                    <option value="">Select experience</option>
+
+                    <option value="nature">Nature & Hills</option>
+
+                    <option value="beach">Beaches</option>
+
+                    <option value="culture">Culture & Temples</option>
+
+                    <option value="backwater">Backwaters</option>
+
+                    <option value="adventure">Adventure</option>
+
+                </select>
+
+            </div>
+
+
+            <button onclick="createTrip()">
+                Create My Trip →
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div id="result" class="result">
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="plan-cta">
+
+        <h2>Found Your Perfect Trip?</h2>
+
+        <p>
+            Ready to turn your plan into a real Kerala journey?
+        </p>
+
+        <a href="booking.html">
+            Book Your Trip →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Kerala Trails • Explore Kerala with us 🌴
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function createTrip() {
+
+            const days =
+                document.getElementById("days").value;
+
+            const budget =
+                document.getElementById("budget").value;
+
+            const type =
+                document.getElementById("type").value;
+
+            const result =
+                document.getElementById("result");
+
+
+            if (!days || !budget || !type) {
+
+                result.innerHTML = `
+                    <div class="error">
+                        Please select all options before creating your trip. 🌿
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            let places = [];
+
+
+            if (type === "nature") {
+
+                places = [
+                    "Munnar",
+                    "Thekkady",
+                    "Wayanad",
+                    "Vagamon",
+                    "Athirappilly"
+                ];
+
+            }
+
+
+            else if (type === "beach") {
+
+                places = [
+                    "Varkala",
+                    "Kovalam",
+                    "Marari",
+                    "Kannur",
+                    "Bekal"
+                ];
+
+            }
+
+
+            else if (type === "culture") {
+
+                places = [
+                    "Guruvayur",
+                    "Thrissur",
+                    "Kochi",
+                    "Kozhikode",
+                    "Bekal"
+                ];
+
+            }
+
+
+            else if (type === "backwater") {
+
+                places = [
+                    "Alleppey",
+                    "Kumarakom",
+                    "Kuttanad",
+                    "Marari",
+                    "Ashtamudi"
+                ];
+
+            }
+
+
+            else if (type === "adventure") {
+
+                places = [
+                    "Wayanad",
+                    "Vagamon",
+                    "Thekkady",
+                    "Munnar",
+                    "Athirappilly"
+                ];
+
+            }
+
+
+            let itinerary = "";
+
+
+            const numberOfDays = Number(days);
+
+
+            for (let i = 0; i < numberOfDays; i++) {
+
+                const place =
+                    places[i % places.length];
+
+
+                itinerary += `
+                    <div class="day-card">
+
+                        <span>DAY ${i + 1}</span>
+
+                        <h3>${place}</h3>
+
+                        <p>
+                            Explore the beauty of ${place},
+                            enjoy local experiences and
+                            create unforgettable memories.
+                        </p>
+
+                    </div>
+                `;
+
+            }
+
+
+            let budgetText = "";
+
+            if (budget === "budget") {
+
+                budgetText =
+                    "Budget-friendly travel";
+
+            }
+
+            else if (budget === "medium") {
+
+                budgetText =
+                    "Comfortable travel";
+
+            }
+
+            else {
+
+                budgetText =
+                    "Premium travel experience";
+
+            }
+
+
+            result.innerHTML = `
+
+                <div class="result-header">
+
+                    <span>YOUR KERALA ITINERARY</span>
+
+                    <h2>${days}-Day Kerala Trip 🌴</h2>
+
+                    <p>
+                        ${budgetText}
+                    </p>
+
+                </div>
+
+                <div class="itinerary">
+
+                    ${itinerary}
+
+                </div>
+
+            `;
+
+
+            result.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

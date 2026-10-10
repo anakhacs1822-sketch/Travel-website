@@ -1,0 +1,898 @@
+/* ================================
+   KERALA TRAILS
+   Simple Kerala-inspired design
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f3e8;
+    color: #263b2d;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+
+    background: rgba(255, 253, 246, 0.92);
+    border-bottom: 1px solid rgba(38, 59, 45, 0.12);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1d4b35;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #34483a;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #a77b2d;
+}
+
+.book-btn {
+    padding: 10px 21px;
+
+    background: #1d4b35;
+    color: white;
+
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.book-btn:hover {
+    background: #143927;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 92vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 150px 7% 80px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(24, 55, 39, 0.38),
+            rgba(24, 55, 39, 0.58)
+        ),
+        url("https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.small-title {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: normal;
+
+    margin-bottom: 22px;
+}
+
+.hero p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+
+    max-width: 560px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    border-radius: 3px;
+}
+
+.primary-btn {
+    background: #b58a3a;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #9d742d;
+}
+
+.secondary-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #1d4b35;
+}
+
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    font-family: Arial, sans-serif;
+
+    color: #a77b2d;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+.section-heading span {
+    font-family: Arial, sans-serif;
+
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================================
+   EXPERIENCES
+================================ */
+
+.experiences {
+    padding: 100px 7%;
+    background: #f7f3e8;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.experience-card {
+    padding: 32px 18px;
+
+    text-align: center;
+
+    background: #fffdf7;
+
+    border: 1px solid #e5dfd0;
+
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #b58a3a;
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.experience-card h3 {
+    font-size: 18px;
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+.experience-card p {
+    font-family: Arial, sans-serif;
+
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* ================================
+   PACKAGES
+================================ */
+
+.packages {
+    padding: 100px 7%;
+    background: #fffdf7;
+}
+
+.package-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.package-card {
+    background: #f7f3e8;
+
+    border: 1px solid #e5dfd0;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+}
+
+.package-image {
+    height: 240px;
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+
+/* Munnar */
+
+.munnar {
+    background-image:
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Guruvayur */
+
+.guruvayur {
+    background-image:
+        url("https://images.unsplash.com/photo-1600100397608-f010e0d0f4b5?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Wonderla */
+
+.wonderla {
+    background-image:
+        url("https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=1200&q=85");
+}
+
+.package-image span {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 6px 12px;
+
+    background: #fffdf7;
+
+    color: #34483a;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.package-content {
+    padding: 25px;
+}
+
+.package-content h3 {
+    font-size: 22px;
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+.package-content p {
+    font-family: Arial, sans-serif;
+
+    color: #777;
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.package-content strong {
+    display: block;
+
+    color: #1d4b35;
+
+    font-family: Arial, sans-serif;
+
+    margin-bottom: 14px;
+}
+
+.package-content a {
+    color: #a77b2d;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   CALL TO ACTION
+================================ */
+
+.cta {
+    padding: 95px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(29, 75, 53, 0.94),
+            rgba(29, 75, 53, 0.94)
+        );
+
+    color: white;
+}
+
+.cta h2 {
+    font-size: 40px;
+    font-weight: normal;
+
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #163b2a;
+
+    color: white;
+}
+
+footer h3 {
+    font-size: 23px;
+    font-weight: normal;
+
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-family: Arial, sans-serif;
+
+    color: #cbd4cc;
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 18px;
+    font-size: 11px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .experience-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .package-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .hero {
+        padding: 130px 5% 60px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ============================= */
+/* PACKAGE PAGE */
+/* ============================= */
+
+.package-hero {
+    height: 420px;
+
+    background:
+        linear-gradient(
+            rgba(20, 60, 40, 0.55),
+            rgba(20, 60, 40, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.package-hero p {
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.package-hero h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.package-hero span {
+    font-size: 16px;
+}
+
+
+/* PACKAGE SECTION */
+
+.packages {
+    padding: 90px 6%;
+
+    background: #fffaf0;
+
+    text-align: center;
+}
+
+.small-title {
+    color: #b28a38;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.packages > h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    font-weight: normal;
+
+    margin-bottom: 50px;
+}
+
+
+/* PACKAGE GRID */
+
+.package-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    text-align: left;
+}
+
+
+/* CARD */
+
+.package-card {
+
+    background: #f8f4e8;
+
+    border: 1px solid #e1d7c1;
+
+    transition: 0.3s;
+
+    overflow: hidden;
+}
+
+.package-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 30px rgba(23, 61, 42, 0.08);
+}
+
+
+/* IMAGE */
+
+.package-image {
+
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+.package-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.package-image span {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    background: #fffaf0;
+
+    color: #31563f;
+
+    padding: 10px 14px;
+
+    font-size: 12px;
+}
+
+
+/* CONTENT */
+
+.package-content {
+
+    padding: 30px;
+}
+
+.package-content h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: normal;
+
+    margin-bottom: 12px;
+}
+
+.package-content p {
+
+    color: #68756d;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+.package-content h4 {
+
+    color: #174d35;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+.package-content a {
+
+    color: #b28a38;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.package-content a:hover {
+
+    color: #174d35;
+}
+
+
+/* CTA */
+
+.package-cta {
+
+    padding: 90px 20px;
+
+    background: #e9e1cd;
+
+    text-align: center;
+}
+
+.package-cta p {
+
+    color: #b28a38;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.package-cta h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.package-cta a {
+
+    display: inline-block;
+
+    background: #174d35;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+}
+
+.package-cta a:hover {
+
+    background: #b28a38;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .package-hero h1 {
+
+        font-size: 40px;
+    }
+
+    .package-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .package-image {
+
+        height: 240px;
+    }
+
+}
+/* =================================
+   PLAN MY TRIP SECTION
+   ================================= */
+
+.plan-section {
+    margin: 80px 7%;
+    padding: 75px 40px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            rgba(25, 70, 48, 0.90),
+            rgba(25, 70, 48, 0.90)
+        ),
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    box-shadow:
+        0 15px 40px rgba(31, 77, 53, 0.15);
+}
+
+.plan-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.plan-content span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #e4c36d;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.plan-content h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.plan-content p {
+    max-width: 650px;
+
+    margin: 0 auto 28px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    opacity: 0.92;
+}
+
+.plan-btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: #d2ad5c;
+
+    color: #1f3527;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.plan-btn:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .plan-section {
+        margin: 60px 20px;
+
+        padding: 55px 22px;
+    }
+
+    .plan-content h2 {
+        font-size: 30px;
+    }
+
+    .plan-content p {
+        font-size: 14px;
+    }
+
+}

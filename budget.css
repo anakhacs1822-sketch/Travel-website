@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ec;
+    color: #24382b;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #123c2a;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: #f4d58d;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f4d58d;
+}
+
+nav a.active {
+    color: #f4d58d;
+    font-weight: bold;
+    border-bottom: 2px solid #f4d58d;
+    padding-bottom: 5px;
+}
+
+.book-btn {
+    background: #d5a84a;
+    color: #173b2a !important;
+    padding: 10px 17px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.budget-hero {
+    min-height: 65vh;
+
+    background:
+        linear-gradient(
+            rgba(10, 45, 30, 0.55),
+            rgba(10, 45, 30, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content span {
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+    font-size: 70px;
+    margin: 18px 0;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator-section {
+    padding: 80px 7%;
+}
+
+.calculator-box {
+    max-width: 950px;
+    margin: auto;
+
+    background: white;
+
+    padding: 55px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span,
+.info-content span {
+    color: #b68a32;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.section-title p {
+    color: #666;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #b68a32;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.calculate-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #123c2a;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.calculate-btn:hover {
+    background: #b68a32;
+    color: #173b2a;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result-box {
+    margin-top: 35px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #f3eee0;
+
+    border-radius: 15px;
+}
+
+.result-box h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+}
+
+#budgetAmount {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    color: #b68a32;
+
+    margin: 15px 0;
+}
+
+#budgetMessage {
+    color: #666;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info-section {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.info-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.info-content h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin: 12px 0;
+}
+
+.info-content p {
+    line-height: 1.8;
+    color: #666;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.budget-cta {
+    background: #123c2a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.budget-cta h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+}
+
+.budget-cta p {
+    margin: 15px 0 25px;
+}
+
+.budget-cta a {
+    display: inline-block;
+
+    background: #d5a84a;
+
+    color: #173b2a;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0c2a1d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    line-height: 1.8;
+}
+
+footer h3 {
+    color: #f4d58d;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .calculator-section {
+        padding: 50px 20px;
+    }
+
+    .calculator-box {
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    #budgetAmount {
+        font-size: 35px;
+    }
+
+}

@@ -1,0 +1,584 @@
+/* =================================
+   KERALA TRAILS - PLAN MY TRIP
+   ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f3e8;
+    color: #263b2d;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 7%;
+
+    background: rgba(255, 252, 244, 0.95);
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1f4d35;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #263b2d;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b08a3c;
+}
+
+.book-btn {
+    background: #1f4d35;
+    color: white !important;
+    padding: 11px 20px;
+    border-radius: 25px;
+}
+
+.book-btn:hover {
+    background: #b08a3c;
+}
+
+
+/* =================================
+   HERO
+   ================================= */
+
+.plan-hero {
+    min-height: 65vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 130px 20px 70px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(20, 55, 38, 0.60),
+            rgba(20, 55, 38, 0.60)
+        ),
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content span {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #e7c77a;
+
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.hero-content h1 {
+    font-size: clamp(45px, 7vw, 80px);
+
+    margin-bottom: 18px;
+
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+
+/* =================================
+   PLANNER SECTION
+   ================================= */
+
+.planner {
+    padding: 90px 7%;
+}
+
+.planner-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.planner-title span {
+    color: #b08a3c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.planner-title h2 {
+    color: #1f4d35;
+
+    font-size: 42px;
+
+    margin: 10px 0;
+}
+
+.planner-title p {
+    color: #687068;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   PLANNER BOX
+   ================================= */
+
+.planner-box {
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: #fffdf7;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 40px rgba(31, 77, 53, 0.12);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #1f4d35;
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.form-group select {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #d8d2c4;
+
+    border-radius: 10px;
+
+    background: #fdfbf5;
+
+    color: #39483e;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-group select:focus {
+    border-color: #b08a3c;
+
+    box-shadow:
+        0 0 0 3px rgba(176, 138, 60, 0.12);
+}
+
+
+/* =================================
+   CREATE BUTTON
+   ================================= */
+
+.planner-box button {
+    width: 100%;
+
+    border: none;
+
+    padding: 16px 25px;
+
+    margin-top: 5px;
+
+    border-radius: 30px;
+
+    background: #1f4d35;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.planner-box button:hover {
+    background: #b08a3c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   RESULT
+   ================================= */
+
+.result {
+    max-width: 1000px;
+
+    margin: 55px auto 0;
+}
+
+.result-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.result-header span {
+    color: #b08a3c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.result-header h2 {
+    color: #1f4d35;
+
+    font-size: 38px;
+
+    margin: 8px 0;
+}
+
+.result-header p {
+    color: #687068;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   ITINERARY
+   ================================= */
+
+.itinerary {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.day-card {
+    padding: 28px;
+
+    background: #fffdf7;
+
+    border-radius: 18px;
+
+    border-top: 4px solid #b08a3c;
+
+    box-shadow:
+        0 10px 30px rgba(31, 77, 53, 0.09);
+
+    transition: 0.3s;
+}
+
+.day-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(31, 77, 53, 0.14);
+}
+
+.day-card span {
+    color: #b08a3c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.day-card h3 {
+    color: #1f4d35;
+
+    font-size: 27px;
+
+    margin: 8px 0 12px;
+}
+
+.day-card p {
+    color: #69716b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   ERROR MESSAGE
+   ================================= */
+
+.error {
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: #f8e9d7;
+
+    color: #76572c;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   CTA
+   ================================= */
+
+.plan-cta {
+    margin: 20px 7% 80px;
+
+    padding: 70px 30px;
+
+    text-align: center;
+
+    background: #1f4d35;
+
+    color: white;
+
+    border-radius: 25px;
+}
+
+.plan-cta h2 {
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+.plan-cta p {
+    margin-bottom: 25px;
+
+    font-family: Arial, sans-serif;
+
+    opacity: 0.9;
+}
+
+.plan-cta a {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    background: #d2ad5c;
+
+    color: #1f3527;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.plan-cta a:hover {
+    background: white;
+}
+
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #183426;
+
+    color: white;
+}
+
+footer p {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+
+/* =================================
+   TABLET
+   ================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 18px 4%;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    .planner {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .itinerary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 650px) {
+
+    header {
+        position: relative;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 11px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .plan-hero {
+        min-height: 60vh;
+
+        padding: 70px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .planner {
+        padding: 65px 20px;
+    }
+
+    .planner-title h2 {
+        font-size: 32px;
+    }
+
+    .planner-box {
+        padding: 25px 20px;
+    }
+
+    .itinerary {
+        grid-template-columns: 1fr;
+    }
+
+    .result-header h2 {
+        font-size: 30px;
+    }
+
+    .plan-cta {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 55px 20px;
+    }
+
+    .plan-cta h2 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,860 @@
+/* =====================================================
+   ALLEPPEY PAGE
+   Kerala Trails
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #173b2c;
+    background: #f8f5ed;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 7%;
+
+    color: white;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #d9b56c;
+}
+
+.book-btn {
+    background: #d9b56c;
+    color: #173b2c !important;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 38, 27, 0.82),
+            rgba(10, 38, 27, 0.35),
+            rgba(0, 0, 0, 0.15)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 750px;
+
+    margin-left: 8%;
+    color: white;
+}
+
+.small-title {
+    color: #e3c27a;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(70px, 11vw, 150px);
+    font-weight: normal;
+    line-height: 0.95;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 550px;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    display: inline-block;
+
+    background: #d9b56c;
+    color: #173b2c;
+
+    padding: 14px 28px;
+
+    border-radius: 3px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.section-label {
+    color: #a27b35;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(35px, 5vw, 60px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.dark-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #173b2c;
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.dark-btn:hover {
+    background: #a27b35;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 110px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.intro-image {
+    height: 550px;
+    overflow: hidden;
+}
+
+.intro-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-text p:not(.section-label) {
+    color: #5f6f66;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features {
+    background: #173b2c;
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 55px 7%;
+}
+
+.feature {
+    text-align: center;
+
+    padding: 10px 25px;
+
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature span {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #c7d2cb;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   HOUSEBOAT
+===================================================== */
+
+.houseboat-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 120px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.houseboat-text > p:not(.section-label) {
+    color: #65756d;
+    margin-bottom: 15px;
+}
+
+.houseboat-image {
+    height: 550px;
+    overflow: hidden;
+}
+
+.houseboat-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.experience-list {
+    margin-top: 35px;
+}
+
+.experience-list div {
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ddd8ca;
+}
+
+.experience-list strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.experience-list span {
+    color: #737d77;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   PLACES
+===================================================== */
+
+.places-section {
+    background: white;
+
+    padding: 110px 7%;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.places-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.place-card {
+    background: #f8f5ed;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.place-card:hover {
+    transform: translateY(-7px);
+}
+
+.place-card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.place-content {
+    padding: 25px;
+}
+
+.place-content h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+.place-content p {
+    color: #68756e;
+}
+
+
+/* =====================================================
+   BANNER
+===================================================== */
+
+.backwater-banner {
+    height: 550px;
+
+    position: relative;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(11, 42, 29, 0.55);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 20px;
+}
+
+.banner-content p {
+    color: #e1bd72;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+.banner-content h2 {
+    max-width: 700px;
+}
+
+.banner-content a {
+    color: #173b2c;
+
+    background: #d9b56c;
+
+    padding: 14px 25px;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   EXPERIENCES
+===================================================== */
+
+.experience-section {
+    padding: 110px 7%;
+}
+
+.experience-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.experience-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-top: 3px solid #d9b56c;
+}
+
+.experience-card .icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.experience-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+    margin-bottom: 10px;
+}
+
+.experience-card p {
+    color: #6d776f;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   CULTURE
+===================================================== */
+
+.culture {
+    background: #173b2c;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+}
+
+.culture-image {
+    height: 600px;
+}
+
+.culture-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.culture-content {
+    padding: 70px;
+}
+
+.culture-content h2 {
+    color: white;
+}
+
+.culture-content p:not(.section-label) {
+    color: #ccd5cf;
+
+    margin-bottom: 18px;
+}
+
+.culture-content .dark-btn {
+    background: #d9b56c;
+
+    color: #173b2c;
+}
+
+
+/* =====================================================
+   ITINERARY
+===================================================== */
+
+.itinerary {
+    padding: 110px 7%;
+
+    background: #f8f5ed;
+}
+
+.timeline {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 35px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #ddd8ca;
+}
+
+.timeline-item > span {
+    color: #a27b35;
+
+    font-weight: bold;
+}
+
+.timeline-item h3 {
+    font-family: Georgia, serif;
+
+    font-weight: normal;
+
+    font-size: 23px;
+
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: #6c766f;
+}
+
+
+/* =====================================================
+   PACKAGE
+===================================================== */
+
+.package {
+    background: #173b2c;
+
+    color: white;
+
+    padding: 100px 7%;
+
+    text-align: center;
+}
+
+.package-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.package h2 {
+    color: white;
+}
+
+.package-content > p:not(.section-label):not(.note) {
+    color: #cbd4ce;
+}
+
+.price {
+    font-family: Georgia, serif;
+
+    color: #e0bd72;
+
+    font-size: 35px;
+
+    margin: 20px 0;
+}
+
+.note {
+    color: #aebbb3;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.package-btn {
+    display: inline-block;
+
+    background: #d9b56c;
+
+    color: #173b2c;
+
+    padding: 14px 28px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #10291f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 20px;
+}
+
+.footer-logo {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    margin-bottom: 8px;
+}
+
+footer > p {
+    color: #aebbb3;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    margin: 25px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #d7ded9;
+
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #d9b56c;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a:not(.book-btn) {
+        display: none;
+    }
+
+    .hero-content {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    .intro,
+    .houseboat-section,
+    .culture {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .feature {
+        border-right: none;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .culture-image {
+        height: 450px;
+    }
+
+    .culture-content {
+        padding: 60px 7%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .intro,
+    .houseboat-section {
+        padding: 75px 6%;
+    }
+
+    .intro-image,
+    .houseboat-image {
+        height: 400px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 45px 7%;
+    }
+
+    .places-section,
+    .experience-section,
+    .itinerary {
+        padding: 75px 6%;
+    }
+
+    .place-card img {
+        height: 240px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .backwater-banner {
+        height: 450px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .package {
+        padding: 75px 6%;
+    }
+
+}

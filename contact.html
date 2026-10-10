@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Kerala Trails</title>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            Kerala Trails
+        </div>
+
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="places.html">Places</a>
+    <a href="package.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="plan.html">Plan My Trip</a>
+    <a href="about.html">About</a>
+    <a href="checklist.html">Checklist</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="booking.html" class="book-btn">Book Now</a>
+</nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="contact-hero">
+
+        <div>
+
+            <p>KERALA TRAILS</p>
+
+            <h1>Let's Talk</h1>
+
+            <span>
+                Have a question? We'd love to hear from you.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT CONTENT -->
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+
+            <p class="small-title">GET IN TOUCH</p>
+
+            <h2>Start planning<br>your journey.</h2>
+
+            <p class="description">
+                Whether you're dreaming of misty mountains,
+                peaceful backwaters or beautiful beaches,
+                we're here to help you plan your Kerala experience.
+            </p>
+
+
+            <div class="info-item">
+
+                <span>📍</span>
+
+                <div>
+                    <h3>Location</h3>
+                    <p>Kerala, India</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>📞</span>
+
+                <div>
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>✉️</span>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>hello@keralatrails.com</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>🕐</span>
+
+                <div>
+                    <h3>Working Hours</h3>
+                    <p>Monday – Saturday, 9 AM – 6 PM</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+            <p class="small-title">SEND A MESSAGE</p>
+
+            <h2>How can we help?</h2>
+
+            <form id="contactForm">
+
+                <label>Your Name</label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label>Subject</label>
+
+                <input
+                    type="text"
+                    placeholder="What is your message about?"
+                    required
+                >
+
+
+                <label>Message</label>
+
+                <textarea
+                    rows="6"
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Send Message →
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAP -->
+
+    <section class="map-section">
+
+        <div class="map-content">
+
+            <p class="small-title">FIND US</p>
+
+            <h2>Somewhere in beautiful Kerala 🌴</h2>
+
+            <p>
+                We're here to help you discover the best
+                experiences across God's Own Country.
+            </p>
+
+        </div>
+
+        <div class="map-box">
+            <span>📍</span>
+            <p>Kerala, India</p>
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="contact-cta">
+
+        <p>YOUR NEXT ADVENTURE</p>
+
+        <h2>Ready to explore Kerala?</h2>
+
+        <a href="booking.html">
+            Plan My Trip →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>Kerala Trails</h2>
+
+        <p>Discover Kerala. Create memories.</p>
+
+        <p class="copyright">
+            © 2026 Kerala Trails. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- FORM SCRIPT -->
+
+    <script>
+
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert("Thank you! Your message has been sent. 🌿");
+
+                this.reset();
+
+            });
+
+    </script>
+
+</body>
+
+</html>

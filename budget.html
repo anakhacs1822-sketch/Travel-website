@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kerala Budget Calculator | Kerala Trails</title>
+
+    <link rel="stylesheet" href="budget.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">Kerala Trails</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="package.html">Packages</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="plan.html">Plan My Trip</a>
+            <a href="budget.html" class="active">Budget</a>
+            <a href="checklist.html">Checklist</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="book-btn">Book Now</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="budget-hero">
+
+        <div class="hero-content">
+
+            <span>KERALA • TRAVEL PLANNER</span>
+
+            <h1>Plan Your Budget</h1>
+
+            <p>
+                Estimate the cost of your Kerala trip
+                in just a few clicks.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALCULATOR -->
+    <section class="calculator-section">
+
+        <div class="calculator-box">
+
+            <div class="section-title">
+
+                <span>SMART TRAVEL TOOL</span>
+
+                <h2>Kerala Trip Budget Calculator 💰</h2>
+
+                <p>
+                    Enter your trip details and get an approximate
+                    budget for your journey.
+                </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <!-- PEOPLE -->
+                <div class="form-group">
+
+                    <label for="people">
+                        Number of People
+                    </label>
+
+                    <input
+                        type="number"
+                        id="people"
+                        min="1"
+                        value="2"
+                    >
+
+                </div>
+
+
+                <!-- DAYS -->
+                <div class="form-group">
+
+                    <label for="days">
+                        Number of Days
+                    </label>
+
+                    <input
+                        type="number"
+                        id="days"
+                        min="1"
+                        value="3"
+                    >
+
+                </div>
+
+
+                <!-- STAY -->
+                <div class="form-group">
+
+                    <label for="stay">
+                        Stay Type
+                    </label>
+
+                    <select id="stay">
+
+                        <option value="budget">
+                            Budget Stay
+                        </option>
+
+                        <option value="standard" selected>
+                            Standard Hotel
+                        </option>
+
+                        <option value="premium">
+                            Premium Hotel
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TRAVEL -->
+                <div class="form-group">
+
+                    <label for="travel">
+                        Travel Type
+                    </label>
+
+                    <select id="travel">
+
+                        <option value="public">
+                            Bus / Public Transport
+                        </option>
+
+                        <option value="cab" selected>
+                            Private Cab
+                        </option>
+
+                        <option value="premium">
+                            Premium Travel
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button
+                class="calculate-btn"
+                onclick="calculateBudget()"
+            >
+                Calculate My Budget →
+            </button>
+
+
+            <!-- RESULT -->
+
+            <div id="result" class="result-box">
+
+                <h3>Your Estimated Budget</h3>
+
+                <div id="budgetAmount">
+                    ₹0
+                </div>
+
+                <p id="budgetMessage">
+                    Enter your trip details above.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+
+    <section class="info-section">
+
+        <div class="info-content">
+
+            <span>GOOD TO KNOW</span>
+
+            <h2>Travel Smart 🌴</h2>
+
+            <p>
+                This calculator provides an approximate estimate.
+                Actual costs may change depending on season,
+                hotel availability, transportation and activities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="budget-cta">
+
+        <h2>Ready to Explore Kerala?</h2>
+
+        <p>
+            Plan your journey and book your Kerala experience.
+        </p>
+
+        <a href="booking.html">
+            Book Your Trip →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>Kerala Trails 🌴</h3>
+
+        <p>
+            Discover the beauty of God's Own Country.
+        </p>
+
+        <p>
+            © 2026 Kerala Trails. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function calculateBudget() {
+
+            const people =
+                Number(document.getElementById("people").value);
+
+            const days =
+                Number(document.getElementById("days").value);
+
+            const stay =
+                document.getElementById("stay").value;
+
+            const travel =
+                document.getElementById("travel").value;
+
+
+            if (people < 1 || days < 1) {
+
+                alert("Please enter valid trip details.");
+
+                return;
+
+            }
+
+
+            /* STAY COST PER PERSON PER DAY */
+
+            let stayCost = 0;
+
+            if (stay === "budget") {
+
+                stayCost = 800;
+
+            } else if (stay === "standard") {
+
+                stayCost = 1500;
+
+            } else if (stay === "premium") {
+
+                stayCost = 3000;
+
+            }
+
+
+            /* TRAVEL COST PER PERSON PER DAY */
+
+            let travelCost = 0;
+
+            if (travel === "public") {
+
+                travelCost = 400;
+
+            } else if (travel === "cab") {
+
+                travelCost = 1000;
+
+            } else if (travel === "premium") {
+
+                travelCost = 1800;
+
+            }
+
+
+            /* FOOD COST */
+
+            const foodCost = 600;
+
+
+            /* ACTIVITY COST */
+
+            const activityCost = 300;
+
+
+            /* TOTAL */
+
+            const totalPerPerson =
+                (stayCost + travelCost + foodCost + activityCost) * days;
+
+
+            const total =
+                totalPerPerson * people;
+
+
+            /* DISPLAY */
+
+            document.getElementById("budgetAmount").innerText =
+                "₹" + total.toLocaleString("en-IN");
+
+
+            document.getElementById("budgetMessage").innerText =
+                "Estimated cost for " +
+                people +
+                " people for " +
+                days +
+                " day(s).";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

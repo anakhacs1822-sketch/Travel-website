@@ -1,0 +1,523 @@
+/* ================================
+   KERALA TRAILS - PLACES PAGE
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f3e8;
+    color: #263b2d;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 7%;
+    background: rgba(255, 252, 244, 0.95);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1f4d35;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #263b2d;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b08a3c;
+}
+
+.book-btn {
+    background: #1f4d35;
+    color: white !important;
+    padding: 11px 20px;
+    border-radius: 25px;
+}
+
+.book-btn:hover {
+    background: #b08a3c;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+.places-hero {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 140px 20px 80px;
+
+    background:
+        linear-gradient(
+            rgba(20, 55, 38, 0.55),
+            rgba(20, 55, 38, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.places-hero h1 {
+    font-size: clamp(45px, 7vw, 85px);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.places-hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.95;
+}
+
+.hero-label {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #e7c77a;
+}
+
+
+/* ================================
+   INTRO
+   ================================ */
+
+.intro {
+    max-width: 850px;
+    margin: auto;
+    padding: 90px 25px 60px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 38px;
+    color: #1f4d35;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-family: Arial, sans-serif;
+    color: #59645c;
+    font-size: 17px;
+}
+
+
+/* ================================
+   PLACES SECTION
+   ================================ */
+
+.places {
+    padding: 30px 7% 90px;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================================
+   PLACE CARD
+   ================================ */
+
+.place-card {
+    background: #fffdf7;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(34, 62, 45, 0.10);
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(34, 62, 45, 0.18);
+}
+
+
+/* ================================
+   PLACE IMAGES
+   ================================ */
+
+.place-image {
+    height: 250px;
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Munnar */
+
+.place-image.munnar {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Alleppey */
+
+.place-image.alleppey {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1602301829045-7c1f0f2c6e5a?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Varkala */
+
+.place-image.varkala {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Wayanad */
+
+.place-image.wayanad {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Guruvayur */
+
+.place-image.guruvayur {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1600100397608-f010e0d0f4b5?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Thekkady */
+
+.place-image.thekkady {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Kovalam */
+
+.place-image.kovalam {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* Wonderla */
+
+.place-image.wonderla {
+    background-image:
+        linear-gradient(
+            rgba(20, 55, 38, 0.15),
+            rgba(20, 55, 38, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=1200&q=85");
+}
+
+
+/* ================================
+   IMAGE LABEL
+   ================================ */
+
+.place-image span {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+    background: rgba(255, 255, 255, 0.92);
+    color: #1f4d35;
+
+    padding: 7px 14px;
+    border-radius: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   CARD CONTENT
+   ================================ */
+
+.place-content {
+    padding: 25px;
+}
+
+.place-content h3 {
+    font-size: 26px;
+    color: #1f4d35;
+    margin-bottom: 10px;
+}
+
+.place-content p {
+    font-family: Arial, sans-serif;
+    color: #626b64;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.place-content a {
+    display: inline-block;
+
+    color: #a27b2f;
+    text-decoration: none;
+
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+}
+
+.place-content a:hover {
+    color: #1f4d35;
+    transform: translateX(4px);
+}
+
+
+/* ================================
+   CTA
+   ================================ */
+
+.places-cta {
+    margin: 20px 7% 90px;
+    padding: 70px 30px;
+
+    text-align: center;
+
+    background: #1f4d35;
+    color: white;
+
+    border-radius: 25px;
+}
+
+.places-cta h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.places-cta p {
+    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.places-cta a {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #d2ad5c;
+    color: #1f3527;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.places-cta a:hover {
+    background: white;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    background: #183426;
+    color: white;
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ================================
+   TABLET
+   ================================ */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 18px 4%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .places {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .places-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 650px) {
+
+    header {
+        position: relative;
+
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .places-hero {
+        min-height: 60vh;
+        padding: 70px 20px;
+    }
+
+    .places-hero h1 {
+        font-size: 48px;
+    }
+
+    .places-hero p {
+        font-size: 16px;
+    }
+
+    .intro {
+        padding: 65px 20px 40px;
+    }
+
+    .intro h2 {
+        font-size: 30px;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .place-image {
+        height: 230px;
+    }
+
+    .places-cta {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 55px 20px;
+    }
+
+    .places-cta h2 {
+        font-size: 30px;
+    }
+
+}

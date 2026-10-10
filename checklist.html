@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Checklist | Kerala Trails</title>
+
+    <link rel="stylesheet" href="checklist.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+
+        <div class="logo">
+            Kerala Trails
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="places.html">Places</a>
+
+            <a href="package.html">Packages</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="plan.html">Plan My Trip</a>
+
+            <a href="budget.html">Budget</a>
+
+            <a href="checklist.html" class="active">
+                Checklist
+            </a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="booking.html" class="book-btn">
+                Book Now
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="checklist-hero">
+
+        <div class="hero-content">
+
+            <span>KERALA • TRAVEL ESSENTIALS</span>
+
+            <h1>Travel Checklist</h1>
+
+            <p>
+                Pack smart and enjoy your Kerala journey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHECKLIST -->
+    <section class="checklist-section">
+
+        <div class="checklist-box">
+
+            <div class="section-title">
+
+                <span>READY FOR THE JOURNEY?</span>
+
+                <h2>Don't Forget These! 🎒</h2>
+
+                <p>
+                    Tick each item as you pack it.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-area">
+
+                <div class="progress-text">
+
+                    <span>Trip Preparation</span>
+
+                    <span id="progressText">
+                        0 / 12 packed
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHECKLIST ITEMS -->
+            <div class="checklist">
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>🪪 ID / Important Documents</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>👕 Comfortable Clothes</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>👟 Comfortable Shoes</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>🕶️ Sunglasses</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>🔌 Phone Charger</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>🔋 Power Bank</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>🧴 Personal Care Items</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>💊 Personal Medicines</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>📷 Camera</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>💧 Water Bottle</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>☂️ Umbrella</span>
+
+                </label>
+
+
+                <label class="check-item">
+
+                    <input
+                        type="checkbox"
+                        class="item"
+                    >
+
+                    <span>🎒 Travel Bag</span>
+
+                </label>
+
+            </div>
+
+
+            <!-- RESET BUTTON -->
+            <button
+                class="reset-btn"
+                onclick="resetChecklist()"
+            >
+                Reset Checklist
+            </button>
+
+
+            <!-- MESSAGE -->
+            <div
+                id="completeMessage"
+                class="complete-message"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIP -->
+    <section class="tip-section">
+
+        <div class="tip-box">
+
+            <span>KERALA TRAVEL TIP 🌴</span>
+
+            <h2>Pack Light, Explore More</h2>
+
+            <p>
+                Keep your essentials organized and leave some
+                space in your bag for beautiful Kerala memories.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="checklist-cta">
+
+        <h2>Everything Packed?</h2>
+
+        <p>
+            Your Kerala adventure is waiting for you.
+        </p>
+
+        <a href="booking.html">
+            Book Your Trip →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Kerala Trails 🌴</h3>
+
+        <p>
+            Discover the beauty of God's Own Country.
+        </p>
+
+        <p>
+            © 2026 Kerala Trails. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const items =
+            document.querySelectorAll(".item");
+
+        const progress =
+            document.getElementById("progress");
+
+        const progressText =
+            document.getElementById("progressText");
+
+        const completeMessage =
+            document.getElementById("completeMessage");
+
+
+        /* LOAD SAVED CHECKLIST */
+
+        items.forEach(function(item, index) {
+
+            const saved =
+                localStorage.getItem(
+                    "keralaChecklist" + index
+                );
+
+            if (saved === "true") {
+
+                item.checked = true;
+
+            }
+
+            item.addEventListener(
+                "change",
+                function() {
+
+                    localStorage.setItem(
+                        "keralaChecklist" + index,
+                        item.checked
+                    );
+
+                    updateProgress();
+
+                }
+            );
+
+        });
+
+
+        /* UPDATE PROGRESS */
+
+        function updateProgress() {
+
+            let checked = 0;
+
+            items.forEach(function(item) {
+
+                if (item.checked) {
+
+                    checked++;
+
+                }
+
+            });
+
+
+            const total = items.length;
+
+            const percentage =
+                (checked / total) * 100;
+
+
+            progress.style.width =
+                percentage + "%";
+
+
+            progressText.innerText =
+                checked + " / " + total + " packed";
+
+
+            if (checked === total) {
+
+                completeMessage.innerText =
+                    "🎉 Everything is packed! Have a wonderful Kerala trip! 🌴";
+
+            } else {
+
+                completeMessage.innerText = "";
+
+            }
+
+        }
+
+
+        /* RESET */
+
+        function resetChecklist() {
+
+            items.forEach(function(item, index) {
+
+                item.checked = false;
+
+                localStorage.removeItem(
+                    "keralaChecklist" + index
+                );
+
+            });
+
+            updateProgress();
+
+        }
+
+
+        /* INITIAL UPDATE */
+
+        updateProgress();
+
+    </script>
+
+</body>
+
+</html>

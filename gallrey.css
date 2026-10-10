@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ed;
+    color: #173b2c;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 7%;
+
+    color: white;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: white;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #d9b56c;
+}
+
+.book-btn {
+    background: #d9b56c;
+    color: #173b2c !important;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 75vh;
+
+    position: relative;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(12, 48, 34, 0.65),
+            rgba(12, 48, 34, 0.35)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+
+    max-width: 800px;
+
+    padding: 20px;
+}
+
+.hero-content p {
+    color: #e2bf75;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(55px, 9vw, 110px);
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.hero-content span {
+    font-size: 18px;
+}
+
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 90px 25px 55px;
+}
+
+.label {
+    color: #a27b35;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    font-family: Georgia, serif;
+
+    font-size: 50px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.intro > p:last-child {
+    color: #69756e;
+}
+
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 20px 7% 60px;
+}
+
+.filter {
+    border: 1px solid #cfc7b6;
+
+    background: transparent;
+
+    color: #173b2c;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.filter:hover,
+.filter.active {
+    background: #173b2c;
+
+    color: white;
+
+    border-color: #173b2c;
+}
+
+
+/* GALLERY */
+
+.gallery {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 0 5% 110px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #173b2c;
+}
+
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(5) {
+    height: 520px;
+}
+
+.gallery-item img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(0, 0, 0, 0.78)
+        );
+}
+
+.caption {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+
+    color: white;
+}
+
+.caption span {
+    color: #e2bf75;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+.caption h3 {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: normal;
+
+    margin: 4px 0;
+}
+
+.caption p {
+    color: #e1e6e2;
+
+    font-size: 13px;
+}
+
+
+/* CTA */
+
+.cta {
+    background: #173b2c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.cta p {
+    color: #e2bf75;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+}
+
+.cta h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(35px, 5vw, 60px);
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.cta a {
+    display: inline-block;
+
+    background: #d9b56c;
+
+    color: #173b2c;
+
+    padding: 14px 28px;
+
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #10291f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 20px;
+}
+
+footer h3 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #aebbb3;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #d4ddd7;
+
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #d9b56c;
+}
+
+footer small {
+    color: #7e8d85;
+
+    font-size: 12px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .navbar nav a:not(.book-btn) {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(5) {
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+    }
+
+    .hero-content span {
+        font-size: 15px;
+    }
+
+    .intro {
+        padding-top: 70px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(5) {
+        height: 430px;
+    }
+
+}

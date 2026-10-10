@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Kerala Trails</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Kerala Trails
+        </div>
+
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="places.html">Places</a>
+    <a href="package.html">Packages</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="plan.html">Plan My Trip</a>
+    <a href="checklist.html">Checklist</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="book-btn">Book Now</a>
+</nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p>KERALA • GOD'S OWN COUNTRY</p>
+
+            <h1>
+                Moments of Kerala
+            </h1>
+
+            <span>
+                Explore the beauty, culture and unforgettable
+                experiences of Kerala.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <p class="label">
+            OUR GALLERY
+        </p>
+
+        <h2>
+            A glimpse of Kerala
+        </h2>
+
+        <p>
+            From misty mountains and peaceful backwaters
+            to golden beaches and vibrant culture,
+            discover the many sides of Kerala.
+        </p>
+
+    </section>
+
+
+    <!-- CATEGORY FILTER -->
+
+    <div class="filters">
+
+        <button class="filter active" onclick="filterGallery('all')">
+            All
+        </button>
+
+        <button class="filter" onclick="filterGallery('hills')">
+            Hills
+        </button>
+
+        <button class="filter" onclick="filterGallery('backwaters')">
+            Backwaters
+        </button>
+
+        <button class="filter" onclick="filterGallery('beaches')">
+            Beaches
+        </button>
+
+        <button class="filter" onclick="filterGallery('culture')">
+            Culture
+        </button>
+
+        <button class="filter" onclick="filterGallery('nature')">
+            Nature
+        </button>
+
+    </div>
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery">
+
+        <!-- MUNNAR -->
+
+        <div class="gallery-item hills">
+
+            <img
+                src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=85"
+                alt="Kerala landscape">
+
+            <div class="caption">
+                <span>HILLS</span>
+                <h3>Munnar</h3>
+                <p>Tea gardens & misty mountains</p>
+            </div>
+
+        </div>
+
+
+        <!-- ALLEPPEY -->
+
+        <div class="gallery-item backwaters">
+
+            <img
+                src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=85"
+                alt="Alleppey backwaters">
+
+            <div class="caption">
+                <span>BACKWATERS</span>
+                <h3>Alleppey</h3>
+                <p>Peaceful houseboat journeys</p>
+            </div>
+
+        </div>
+
+
+        <!-- VARKALA -->
+
+        <div class="gallery-item beaches">
+
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+                alt="Kerala beach">
+
+            <div class="caption">
+                <span>BEACHES</span>
+                <h3>Varkala</h3>
+                <p>Cliffs, ocean & sunsets</p>
+            </div>
+
+        </div>
+
+
+        <!-- NATURE -->
+
+        <div class="gallery-item nature">
+
+            <img
+                src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85"
+                alt="Green forest">
+
+            <div class="caption">
+                <span>NATURE</span>
+                <h3>Kerala Forests</h3>
+                <p>Wild beauty of the Western Ghats</p>
+            </div>
+
+        </div>
+
+
+        <!-- CULTURE -->
+
+        <div class="gallery-item culture">
+
+            <img
+                src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85"
+                alt="Kerala culture">
+
+            <div class="caption">
+                <span>CULTURE</span>
+                <h3>Kerala Heritage</h3>
+                <p>Traditions, art & architecture</p>
+            </div>
+
+        </div>
+
+
+        <!-- HILLS -->
+
+        <div class="gallery-item hills">
+
+            <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+                alt="Mountain landscape">
+
+            <div class="caption">
+                <span>HILLS</span>
+                <h3>Western Ghats</h3>
+                <p>Green mountains & valleys</p>
+            </div>
+
+        </div>
+
+
+        <!-- BACKWATERS -->
+
+        <div class="gallery-item backwaters">
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+                alt="Kerala water landscape">
+
+            <div class="caption">
+                <span>BACKWATERS</span>
+                <h3>Kerala Waters</h3>
+                <p>Calm waters & coconut palms</p>
+            </div>
+
+        </div>
+
+
+        <!-- BEACH -->
+
+        <div class="gallery-item beaches">
+
+            <img
+                src="https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&fit=crop&w=1000&q=85"
+                alt="Tropical beach">
+
+            <div class="caption">
+                <span>BEACHES</span>
+                <h3>Kerala Coast</h3>
+                <p>Golden sands & Arabian Sea</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <p>
+            READY TO EXPERIENCE IT?
+        </p>
+
+        <h2>
+            Your Kerala story starts here.
+        </h2>
+
+        <a href="booking.html">
+            Plan Your Journey →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Kerala Trails
+        </h3>
+
+        <p>
+            Explore Kerala. Create Memories.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="package.html">Packages</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <small>
+            © 2026 Kerala Trails. All Rights Reserved.
+        </small>
+
+    </footer>
+
+
+    <!-- FILTER JAVASCRIPT -->
+
+    <script>
+
+        function filterGallery(category) {
+
+            const items =
+                document.querySelectorAll(".gallery-item");
+
+            const buttons =
+                document.querySelectorAll(".filter");
+
+            buttons.forEach(button => {
+                button.classList.remove("active");
+            });
+
+            event.target.classList.add("active");
+
+            items.forEach(item => {
+
+                if (category === "all") {
+
+                    item.style.display = "block";
+
+                } else if (item.classList.contains(category)) {
+
+                    item.style.display = "block";
+
+                } else {
+
+                    item.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

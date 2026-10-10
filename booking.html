@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Trip | Kerala Trails</title>
+
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            Kerala Trails
+        </div>
+
+        <nav>
+    <a href="index.html">Home</a>
+    <a href="places.html">Places</a>
+    <a href="package.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="checklist.html">Checklist</a>
+    <a href="plan.html">Plan My Trip</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="book-btn active">Book Now</a>
+</nav>
+
+    </header>
+
+
+    <!-- BOOKING HERO -->
+
+    <section class="booking-hero">
+
+        <p>KERALA TRAILS</p>
+
+        <h1>Plan Your Journey</h1>
+
+        <span>Tell us about your Kerala trip.</span>
+
+    </section>
+
+
+    <!-- BOOKING FORM -->
+
+    <section class="booking-section">
+
+        <div class="booking-box">
+
+            <div class="booking-heading">
+
+                <p>YOUR DETAILS</p>
+
+                <h2>Book Your Trip</h2>
+
+                <span>
+                    Fill in the details below and we'll help you plan your journey.
+                </span>
+
+            </div>
+
+
+            <form id="bookingForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Travel Date</label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Number of People</label>
+
+                        <select id="people" required>
+
+                            <option value="">Select</option>
+
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3 People</option>
+                            <option>4 People</option>
+                            <option>5 People</option>
+                            <option>6+ People</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Select Destination</label>
+
+                    <select id="destination" required>
+
+                        <option value="">Choose your destination</option>
+
+                        <option>Munnar</option>
+                        <option>Alleppey</option>
+                        <option>Varkala</option>
+                        <option>Wayanad</option>
+                        <option>Guruvayur</option>
+                        <option>Thekkady</option>
+                        <option>Kovalam</option>
+                        <option>Wonderla</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Tell us anything about your trip..."
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Send Booking Request →
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>Kerala Trails</h2>
+
+        <p>Discover Kerala. Create memories.</p>
+
+        <p class="copyright">
+            © 2026 Kerala Trails. All Rights Reserved.
+        </p>
+
+    </footer>
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Get form values
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const date = document.getElementById("date").value;
+    const people = document.getElementById("people").value;
+    const destination = document.getElementById("destination").value;
+    const message = document.getElementById("message").value;
+
+    // Your travel agency WhatsApp number
+    // Replace this example number with your own number.
+    const agencyNumber = "917736149325";
+
+    // Create WhatsApp message
+    const whatsappMessage =
+        "🌴 *New Kerala Trails Booking*%0A%0A" +
+        "*Name:* " + encodeURIComponent(name) + "%0A" +
+        "*Phone:* " + encodeURIComponent(phone) + "%0A" +
+        "*Destination:* " + encodeURIComponent(destination) + "%0A" +
+        "*Travel Date:* " + encodeURIComponent(date) + "%0A" +
+        "*Number of People:* " + encodeURIComponent(people) + "%0A" +
+        "*Message:* " + encodeURIComponent(message);
+
+    // Open WhatsApp
+    const whatsappURL =
+        "https://wa.me/" + agencyNumber + "?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
+
+    // Clear form
+    document.getElementById("bookingForm").reset();
+
+});
+
+</script>
+    
+</body>
+
+</html>
