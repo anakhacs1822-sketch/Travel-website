@@ -199,45 +199,37 @@
     </footer>
 
 <script>
-
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
-
     event.preventDefault();
 
-    // Get form values
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
     const date = document.getElementById("date").value;
     const people = document.getElementById("people").value;
     const destination = document.getElementById("destination").value;
-    const message = document.getElementById("message").value;
+    const message = document.getElementById("message").value.trim();
 
-    // Your travel agency WhatsApp number
-    // Replace this example number with your own number.
+    // Agency WhatsApp number: country code + number, digits only
     const agencyNumber = "917736149325";
 
-    // Create WhatsApp message
     const whatsappMessage =
-        "🌴 *New Kerala Trails Booking*%0A%0A" +
-        "*Name:* " + encodeURIComponent(name) + "%0A" +
-        "*Phone:* " + encodeURIComponent(phone) + "%0A" +
-        "*Destination:* " + encodeURIComponent(destination) + "%0A" +
-        "*Travel Date:* " + encodeURIComponent(date) + "%0A" +
-        "*Number of People:* " + encodeURIComponent(people) + "%0A" +
-        "*Message:* " + encodeURIComponent(message);
+        "New Kerala Trails Booking\n\n" +
+        "Name: " + name + "\n" +
+        "Customer Phone: " + phone + "\n" +
+        "Destination: " + destination + "\n" +
+        "Travel Date: " + date + "\n" +
+        "Number of People: " + people + "\n" +
+        "Message: " + (message || "No additional message");
 
-    // Open WhatsApp
     const whatsappURL =
-        "https://wa.me/" + agencyNumber + "?text=" + whatsappMessage;
+        "https://wa.me/" + agencyNumber +
+        "?text=" + encodeURIComponent(whatsappMessage);
 
-    window.open(whatsappURL, "_blank");
-
-    // Clear form
-    document.getElementById("bookingForm").reset();
-
+    // Navigate directly, avoiding popup blocking
+    window.location.href = whatsappURL;
 });
-
 </script>
+
     
 </body>
 
